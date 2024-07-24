@@ -1,0 +1,53 @@
+[
+  {
+    "name": "gcp",
+    "commit": {
+      "sha": "c720366fea335692bb322ddc760987656ae31f59",
+      "url": "https://api.github.com/repos/Maxomys/spring-webstore/commits/c720366fea335692bb322ddc760987656ae31f59"
+    },
+    "protected": false,
+    "protection": {
+      "enabled": false,
+      "required_status_checks": {
+        "enforcement_level": "off",
+        "contexts": [],
+        "checks": []
+      }
+    },
+    "protection_url": "https://api.github.com/repos/Maxomys/spring-webstore/branches/gcp/protection"
+  },
+  {
+    "name": "jwt-auth",
+    "commit": {
+      "sha": "b77bc7ce2542b8922ca35af89d4fa09c768dff76",
+      "url": "https://api.github.com/repos/Maxomys/spring-webstore/commits/b77bc7ce2542b8922ca35af89d4fa09c768dff76"
+    },
+    "protected": false,
+    "protection": {
+      "enabled": false,
+      "required_status_checks": {
+        "enforcement_level": "off",
+        "contexts": [],
+        "checks": []
+      }
+    },
+    "protection_url": "https://api.github.com/repos/Maxomys/spring-webstore/branches/jwt-auth/protection"
+  },
+  {
+    "name": "master",
+    "commit": {
+      "sha": "afb854fa349ee2a21867b773ca8bd2f199551703",
+      "url": "https://api.github.com/repos/Maxomys/spring-webstore/commits/afb854fa349ee2a21867b773ca8bd2f199551703"
+    },
+    "protected": false,
+    "protection": {
+      "enabled": false,
+      "required_status_checks": {
+        "enforcement_level": "off",
+        "contexts": [],
+        "checks": []
+      }
+    },
+    "protection_url": "https://api.github.com/repos/Maxomys/spring-webstore/branches/master/protection"
+  }
+]
