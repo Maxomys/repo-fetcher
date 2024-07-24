@@ -38,7 +38,7 @@ Repo Fetcher is a Spring Boot application designed to interact with the GitHub A
 ### Endpoints
 
 - **Get Non-Fork Repositories for a User**
-  - **URL:** `/api/repo/{username}`
+  - **URL:** `/api/repos/{username}`
   - **Method:** `GET`
   - **Response:**
     - **200 OK:** List of non-fork repositories with their branches and commit SHAs.
@@ -47,7 +47,7 @@ Repo Fetcher is a Spring Boot application designed to interact with the GitHub A
 ### Example Request
 
 ```bash
-curl http://localhost:8080/api/repo/octocat
+curl http://localhost:8080/api/repos/octocat
 ```
 
 ### Example Response
