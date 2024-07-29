@@ -1,7 +1,5 @@
 package com.github.maxomys.repofetcher.controllers;
 
-import java.util.List;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +14,7 @@ import com.github.maxomys.repofetcher.exceptions.UserNotFoundException;
 import com.github.maxomys.repofetcher.services.RepositoryService;
 
 import lombok.RequiredArgsConstructor;
+import reactor.core.publisher.Flux;
 
 @RequiredArgsConstructor
 @RestController
@@ -25,7 +24,7 @@ public class RepositoryRestController {
   private final RepositoryService repositoryService;
 
   @GetMapping("/{username}")
-  public List<RepositoryResponse> getNonForkRepositoriesForUsername(@PathVariable String username) {
+  public Flux<RepositoryResponse> getNonForkRepositoriesForUsernameReactive(@PathVariable String username) {
     return repositoryService.getNonForkRepositoriesForUsername(username);
   }
 
@@ -34,5 +33,4 @@ public class RepositoryRestController {
   public NotFoundResponse handleException(Exception e) {
     return new NotFoundResponse(HttpStatus.NOT_FOUND.value(), "The user you are looking for does not exist.");
   }
-
 }

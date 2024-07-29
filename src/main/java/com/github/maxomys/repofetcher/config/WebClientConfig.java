@@ -3,11 +3,11 @@ package com.github.maxomys.repofetcher.config;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.client.RestClient;
+import org.springframework.web.reactive.function.client.WebClient;
 
 @Configuration
-public class RestClientConfig {
-
+public class WebClientConfig {
+  
   @Value("${GH_PRIVATE_KEY}")
   private String GH_PRIVATE_KEY;
 
@@ -15,9 +15,8 @@ public class RestClientConfig {
   private String ghBaseUrl;
 
   @Bean
-  public RestClient ghRestClient() {
-    RestClient.Builder builder = RestClient.builder()
-        .defaultHeader("User-Agent", "RepoFetcher/1.0 (Java 21; Windows 11)")
+  public WebClient ghWebClient() {
+    WebClient.Builder builder = WebClient.builder()
         .baseUrl(ghBaseUrl);
 
     if (GH_PRIVATE_KEY != null && !GH_PRIVATE_KEY.isEmpty()) {
